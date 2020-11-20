@@ -10,6 +10,6 @@
 
 <a href="adduserform.jsp">Add User</a>
 <a href="viewusers.jsp">View Users</a>
-
+<a href="drawingboard/example/test.html">Drawnboard</a>
 </body>
 </html>

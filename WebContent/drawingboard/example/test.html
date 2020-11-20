@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<a href="../../index.jsp">Index</a>
+    <body>
+    <style>
+        #test-board {
+            background-size: contain;
+            background-attachment: fixed;
+        }
+        #test-board .drawing-board-canvas-wrapper {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+            <!--<div class="example" data-example="5"></div>-->
+
+        <div id="container">
+        <div class="board" id="test-board"></div>
+        </div>
+
+            <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+            <script src="../bower_components/simple-undo/lib/simple-undo.js"></script>
+
+            <script src="../js/utils.js"></script>
+            <script src="../js/board.js"></script>
+            <script src="../js/controls/control.js"></script>
+            <script src="../js/controls/color.js"></script>
+            <script src="../js/controls/drawingmode.js"></script>
+            <script src="../js/controls/navigation.js"></script>
+            <script src="../js/controls/size.js"></script>
+            <script src="../js/controls/download.js"></script>
+
+    <script >
+        var testBoard = new DrawingBoard.Board('test-board', {
+            controls: [
+                'Color',
+                { Size: { type: "range", min: 3, max: 30 } },
+                'DrawingMode',
+                'Navigation',
+                'Download'
+            ],
+            size:5,
+            background: "Amongus2.jpg",
+            enlargeYourContainer: false,
+            webStorage: 'local',
+            stretchImg: true,
+            controlsPosition: "bottom left"
+        });
+    </script>
+
+    <!-- totally not drawingboard-related code -->
+    <script src="prism.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
